@@ -1,4 +1,4 @@
-'use client';  // Указываем, что этот компонент должен работать на клиенте
+'use client';
 
 import React, { useState } from 'react';
 import styles from './Login.module.css';

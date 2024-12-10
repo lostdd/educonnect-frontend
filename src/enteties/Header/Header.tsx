@@ -1,26 +1,30 @@
 import React from "react";
-import Link from "next/link";
 import styles from "./Header.module.css";
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  onLoginClick: () => void;
+  onRegisterClick: () => void;
+}
+
+const Header: React.FC<HeaderProps> = ({ onLoginClick, onRegisterClick }) => {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <Link href="/">Образовательная Платформа</Link>
+        <a href="/">Образовательная Платформа</a>
       </div>
       <nav className={styles.nav}>
-        <Link href="/courses">Курсы</Link>
-        <Link href="/portfolio">Портфолио</Link>
-        <Link href="/jobs">Работа</Link>
-        <Link href="/contact">Контакты</Link>
+        <a href="/courses">Курсы</a>
+        <a href="/portfolio">Портфолио</a>
+        <a href="/jobs">Работа</a>
+        <a href="/contact">Контакты</a>
       </nav>
       <div className={styles.authButtons}>
-        <Link href="/login">
-          <button className={styles.loginButton}>Войти</button>
-        </Link>
-        <Link href="/register">
-          <button className={styles.registerButton}>Регистрация</button>
-        </Link>
+        <button className={styles.loginButton} onClick={onLoginClick}>
+          Войти
+        </button>
+        <button className={styles.registerButton} onClick={onRegisterClick}>
+          Регистрация
+        </button>
       </div>
     </header>
   );
