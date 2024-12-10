@@ -1,11 +1,13 @@
+'use client';  // Указываем, что этот компонент должен работать на клиенте
+
 import React, { useState } from 'react';
-import styles from './Registration.module.css';
+import styles from './Register.module.css';
 
 interface RegistrationProps {
-  onSubmit: (data: { email: string; password: string }) => void;
+  onSubmit: (data: { email: string; password: string; confirmPassword: string }) => void;
 }
 
-const Registration: React.FC<RegistrationProps> = ({ onSubmit }) => {
+const Register: React.FC<RegistrationProps> = ({ onSubmit }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -13,9 +15,9 @@ const Registration: React.FC<RegistrationProps> = ({ onSubmit }) => {
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     if (password === confirmPassword) {
-      onSubmit({ email, password });
+      onSubmit({ email, password, confirmPassword });
     } else {
-      alert('Пароли не совпадают');
+      alert('Пароли не совпадают!');
     }
   };
 
@@ -41,7 +43,7 @@ const Registration: React.FC<RegistrationProps> = ({ onSubmit }) => {
         />
         <input
           type="password"
-          placeholder="Подтвердите пароль"
+          placeholder="Подтверждение пароля"
           value={confirmPassword}
           onChange={(e) => setConfirmPassword(e.target.value)}
           className={styles.inputField}
@@ -57,4 +59,4 @@ const Registration: React.FC<RegistrationProps> = ({ onSubmit }) => {
   );
 };
 
-export default Registration;
+export default Register;
