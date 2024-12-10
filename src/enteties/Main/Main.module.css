@@ -1,134 +1,139 @@
 /* styles/MainPage.module.css */
 
 .mainContainer {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: #f5f5f7; /* Светло-серый фон */
-  }
-  
-  .mainContent {
-    flex: 1;
-    padding: 4rem 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-  }
-  
-  .hero {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f5f5f7; /* Светло-серый фон */
+}
+
+.mainContent {
+  flex: 1;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.hero {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Обновленный стиль для фона вокруг текста "Добро пожаловать" */
+.title {
+  font-size: 3.5rem; /* Начальный размер для больших экранов */
+  font-weight: 700; /* Очень жирный для выразительности */
+  color: #212121; /* Темно-серый цвет для улучшенной читаемости */
+  font-family: var(--font-geist-sans);
+  line-height: 1.2; /* Компактное межстрочное расстояние */
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легкая тень для объемности */
+  width: 100%; /* Растягиваем текст на всю ширину */
+  text-align: center; /* Выравниваем текст по центру */
+  margin-top: 2rem;
+  margin-bottom: 1rem; /* Отступ снизу для визуального разделения */
+  word-break: break-word; /* Разбиваем текст, если он не помещается */
+  transition: font-size 0.3s ease; /* Плавное изменение размера */
+  padding: 1.5rem; /* Отступы для фона */
+  background-color: #ffffff; /* Белый фон */
+  color: #212121; /* Цвет текста для контраста */
+  border-radius: 30px; /* Скругленные углы */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1); /* Небольшая тень для эффекта возвышенности */
+  padding-left: 1rem; /* Отступ слева */
+  padding-right: 1rem; /* Отступ справа */
+}
+
+/* Медиа-запрос для экранов шириной менее 750px */
+@media (max-width: 750px) {
   .title {
-    font-size: 3.5rem; /* Начальный размер для больших экранов */
-    font-weight: 800; /* Очень жирный для выразительности */
-    color: #0d0d0d; /* Чистый черный цвет для контраста */
-    font-family: var(--font-geist-sans);
-    line-height: 1.2; /* Компактное межстрочное расстояние */
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Легкий тень для объемности */
-    width: 100%; /* Растягиваем текст на всю ширину */
-    text-align: center; /* Выравниваем текст по центру */
-    margin-top: 2rem;
-    margin-bottom: 1rem; /* Отступ снизу для визуального разделения */
-    word-break: break-word; /* Разбиваем текст, если он не помещается */
-    transition: font-size 0.3s ease; /* Плавное изменение размера */
-  }
-  
-  /* Медиа-запрос для экранов шириной менее 750px */
-  @media (max-width: 750px) {
-    .title {
       font-size: 1.8rem; /* Уменьшаем размер текста */
       content: "Добро пожаловать"; /* Текст заменяется */
-    }
   }
-  
-  
-  
-  .description {
-    font-size: 1.2rem;
-    color: #333333; /* Темно-серый для контраста */
-    font-family: "Inter", sans-serif; /* Легкий и современный шрифт */
-    margin: 1rem 0;
-  }
-  
-  .buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    margin-top: 1.5rem;
-  }
-  
-  .primaryButton {
-    background-color: #007aff; /* Ярко-синий акцентный цвет */
-    color: white;
-    padding: 0.8rem 1.5rem;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .primaryButton:hover {
-    background-color: #005bb5; /* Темно-синий при наведении */
-  }
-  
-  .secondaryButton {
-    background-color: transparent;
-    color: #007aff;
-    padding: 0.8rem 1.5rem;
-    border: 2px solid #007aff;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .secondaryButton:hover {
-    background-color: #007aff;
-    color: white;
-  }
-  
-  .features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-    width: 100%;
-    max-width: 1200px;
-  }
-  
-  .featureCard {
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень */
-    padding: 1.5rem;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .featureCard:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Более заметная тень при наведении */
-  }
-  
-  .featureCard h3 {
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: #0d0d0d;
-    margin-bottom: 0.5rem;
-    font-family: var(--font-geist-sans);
-  }
-  
-  .featureCard p {
-    font-size: 1rem;
-    color: #555555;
-    font-family: "Inter", sans-serif;
-    padding: 5%;
-  }
-  
+}
+
+.description {
+  font-size: 1.2rem;
+  color: #333333; /* Темно-серый для контраста */
+  font-family: "Inter", sans-serif; /* Легкий и современный шрифт */
+  margin: 1rem 0;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.primaryButton {
+  background-color: #007aff; /* Ярко-синий акцентный цвет */
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.primaryButton:hover {
+  background-color: #005bb5; /* Темно-синий при наведении */
+}
+
+.secondaryButton {
+  background-color: transparent;
+  color: #007aff;
+  padding: 0.8rem 1.5rem;
+  border: 2px solid #007aff;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.secondaryButton:hover {
+  background-color: #007aff;
+  color: white;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.featureCard {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень */
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Более заметная тень при наведении */
+}
+
+.featureCard h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #0d0d0d;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-geist-sans);
+}
+
+.featureCard p {
+  font-size: 1rem;
+  color: #555555;
+  font-family: "Inter", sans-serif;
+  padding: 5%;
+}
