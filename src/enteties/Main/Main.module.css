@@ -119,15 +119,16 @@
   
   .featureCard h3 {
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 500;
     color: #0d0d0d;
     margin-bottom: 0.5rem;
-    font-family: "Roboto Slab", serif; /* Тот же выделяющийся шрифт */
+    font-family: var(--font-geist-sans);
   }
   
   .featureCard p {
     font-size: 1rem;
     color: #555555;
     font-family: "Inter", sans-serif;
+    padding: 5%;
   }
   

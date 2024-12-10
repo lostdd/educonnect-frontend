@@ -1,99 +1,103 @@
 /* Основной стиль для Header */
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: white; /* Белый фон */
-    border-bottom: 1px solid #e2e2e5;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Легкая тень */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 2rem; /* Уменьшили верхний и нижний отступы на 30% */
+  background-color: white; /* Белый фон */
+  border-bottom: 1px solid #e2e2e5;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Легкая тень */
+}
+
+/* Стили для логотипа */
+.logo {
+  font-size: 1.4rem; /* Слегка уменьшили размер шрифта */
+  font-weight: 700;
+  color: #333;
+}
+
+/* Стили для навигации */
+.nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav a {
+  font-size: 1rem;
+  color: #333;
+  padding: 0.4rem 0; /* Слегка уменьшили отступы для ссылок */
+}
+
+.nav a:hover {
+  color: #0070c9;
+}
+
+/* Стили для кнопок авторизации */
+.authButtons {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Кнопка Войти */
+.loginButton {
+  background-color: #000000; /* Черный фон */
+  color: white;
+  padding: 0.7rem 1.5rem; /* Уменьшили верхний и нижний отступы */
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem; /* Слегка уменьшили размер шрифта */
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.loginButton:hover {
+  background-color: #333333; /* Темнее черный при наведении */
+}
+
+/* Кнопка Регистрация */
+.registerButton {
+  color: black;
+  padding: 0.7rem 1.5rem; /* Уменьшили верхний и нижний отступы */
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem; /* Слегка уменьшили размер шрифта */
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.registerButton:hover {
+  color: white;
+  background-color: #0f1010; /* Темнее черный при наведении */
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 750px) {
+  .header {
+      flex-direction: column;
+      gap: 0.7rem; /* Уменьшили расстояние между элементами */
+      align-items: center;
+      padding: 0.5rem 1rem; /* Пропорционально уменьшили отступы */
   }
-  
-  .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #333;
-  }
-  
+
   .nav {
-    display: flex;
-    gap: 1.5rem;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
   }
-  
-  .nav a {
-    font-size: 1rem;
-    color: #333;
-    padding: 0.5rem 0;
+
+  .logo {
+      font-size: 1.2rem; /* Сохраняем читаемость на мобильных устройствах */
   }
-  
-  .nav a:hover {
-    color: #0070c9;
-  }
-  
+
   .authButtons {
-    display: flex;
-    gap: 1rem;
-  }
-  
-  /* Кнопка Войти */
-  .loginButton {
-    background-color: #000000; /* Черный фон */
-    color: white;
-    padding: 0.8rem 1.5rem;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .loginButton:hover {
-    background-color: #333333; /* Темнее черный при наведении */
-  }
-  
-  /* Кнопка Регистрация */
-  .registerButton {
-    color: black;
-    padding: 0.8rem 1.5rem;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .registerButton:hover {
-    color: white;
-    background-color: #0f1010; /* Темнее бежевый при наведении */
-  }
-  
-  /* Адаптивность для мобильных устройств */
-  @media (max-width: 750px) {
-    .header {
-      flex-direction: column;
-      gap: 1rem;
-      align-items: center;
-    }
-  
-    .nav {
       flex-direction: column;
       align-items: center;
-      gap: 0.5rem;
-    }
-  
-    .logo {
-      font-size: 1.2rem;
-    }
-  
-    .authButtons {
-      flex-direction: column;
-      align-items: center;
-    }
+      gap: 0.5rem; /* Уменьшили расстояние между кнопками */
   }
-  
+}
