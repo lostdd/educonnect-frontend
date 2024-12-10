@@ -4,16 +4,16 @@ import React, { useState } from 'react';
 import styles from './Login.module.css';
 
 interface LoginProps {
-  onSubmit: (data: { email: string; password: string }) => void;
+  onSubmit: (data: { login: string; password: string }) => void;
 }
 
 const Login: React.FC<LoginProps> = ({ onSubmit }) => {
-  const [email, setEmail] = useState('');
+  const [login, setLogin] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    onSubmit({ email, password });
+    onSubmit({ login, password });
   };
 
   return (
@@ -21,10 +21,10 @@ const Login: React.FC<LoginProps> = ({ onSubmit }) => {
       <h2 className={styles.loginTitle}>Вход</h2>
       <form onSubmit={handleSubmit}>
         <input
-          type="email"
-          placeholder="Электронная почта"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          type="Login"
+          placeholder="Логин"
+          value={login}
+          onChange={(e) => setLogin(e.target.value)}
           className={styles.inputField}
           required
         />
