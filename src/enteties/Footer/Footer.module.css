@@ -1,0 +1,32 @@
+/* components/Footer.module.css */
+
+.footer {
+    background-color: #f5f5f7; /* Светлый серый */
+    color: #333;
+    padding: 2rem 1rem;
+    border-top: 1px solid #e2e2e5;
+    text-align: center;
+  }
+  
+  .footerLinks {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+  
+  .footerLinks a {
+    font-size: 0.875rem;
+    color: #333;
+  }
+  
+  .footerLinks a:hover {
+    color: #0070c9;
+  }
+  
+  .copy {
+    font-size: 0.875rem;
+    color: #666;
+  }
+  
