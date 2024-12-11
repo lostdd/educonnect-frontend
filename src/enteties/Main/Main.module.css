@@ -1,5 +1,3 @@
-/* styles/MainPage.module.css */
-
 .mainContainer {
   display: flex;
   flex-direction: column;
@@ -27,30 +25,21 @@
   font-size: 3.5rem; /* Начальный размер для больших экранов */
   font-weight: 700; /* Очень жирный для выразительности */
   color: #212121; /* Темно-серый цвет для улучшенной читаемости */
-  font-family: var(--font-geist-sans);
+  font-family: var(--font-geist-sans), sans-serif;
   line-height: 1.2; /* Компактное межстрочное расстояние */
-  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легкая тень для объемности */
-  width: 100%; /* Растягиваем текст на всю ширину */
   text-align: center; /* Выравниваем текст по центру */
   margin-top: 2rem;
-  margin-bottom: 1rem; /* Отступ снизу для визуального разделения */
-  word-break: break-word; /* Разбиваем текст, если он не помещается */
-  transition: font-size 0.3s ease; /* Плавное изменение размера */
+  margin-bottom: 1.5rem;
   padding: 1.5rem; /* Отступы для фона */
   background-color: #ffffff; /* Белый фон */
   color: #212121; /* Цвет текста для контраста */
   border-radius: 30px; /* Скругленные углы */
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1); /* Небольшая тень для эффекта возвышенности */
-  padding-left: 1rem; /* Отступ слева */
-  padding-right: 1rem; /* Отступ справа */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Легкая тень для создания объема */
 }
 
-/* Медиа-запрос для экранов шириной менее 750px */
-@media (max-width: 750px) {
-  .title {
-      font-size: 1.8rem; /* Уменьшаем размер текста */
-      content: "Добро пожаловать"; /* Текст заменяется */
-  }
+.title span {
+  color: #007aff; /* Используем акцентный синий для выделения части текста */
+  font-weight: 900; /* Более жирный шрифт для акцента */
 }
 
 .description {
@@ -119,8 +108,8 @@
 }
 
 .featureCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Более заметная тень при наведении */
+  transform: scale(1.05); /* Увеличиваем при наведении */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Усиливаем тень при наведении */
 }
 
 .featureCard h3 {
