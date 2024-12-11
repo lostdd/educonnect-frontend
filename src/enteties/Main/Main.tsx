@@ -103,7 +103,7 @@ const MainPage: React.FC<MainPageProps> = () => {
               <Link href="/collaboration">
                 <h3>Совместная работа над проектом</h3>
               </Link>
-              <p>Удобно управляйте своими задачами.</p>
+              <p>Удобно управление задчами для проекта</p>
             </motion.div>
             <motion.div
               className={styles.featureCard}
