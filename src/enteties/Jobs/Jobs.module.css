@@ -1,0 +1,110 @@
+/* Основные стили для страницы */
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f0f0f0; /* Светло-серый фон */
+    margin-top: 4rem; /* Отступ для шапки */
+  }
+  
+  /* Стили для основного контента */
+  .mainContent {
+    flex: 1;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Контейнер для вакансий */
+  .jobsContainer {
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение вакансий */
+    align-items: center; /* Центрирование по горизонтали */
+    gap: 2rem;
+    width: 100%;
+    padding: 1rem;
+  }
+  
+  /* Карточка вакансии */
+  .jobCard {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 2.1rem; /* Увеличен padding */
+    text-align: center;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+    cursor: pointer; /* Указатель для кнопки */
+    width: 56%; /* Увеличено с 40% до 56% (увеличение на 40%) */
+    max-width: 560px; /* Увеличено с 400px до 560px */
+    opacity: 0; /* Начальное состояние для анимации */
+    transform: translateY(20px); /* Сдвиг для анимации */
+    animation: fadeInUp 0.6s ease forwards; /* Анимация */
+  }
+  
+  /* Задержка анимации для каждой карточки */
+  .jobCard:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  
+  .jobCard:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .jobCard:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  
+  /* Анимация появления карточек */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Эффект при наведении на карточку вакансии */
+  .jobCard:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px); /* Легкий эффект подъема */
+  }
+  
+  /* Заголовок карточки вакансии */
+  .jobCard h2 {
+    font-size: 2rem; /* Увеличен шрифт заголовка */
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  /* Описание вакансии */
+  .jobCard p {
+    font-size: 1.2rem; /* Увеличен шрифт текста */
+    color: #666;
+  }
+  
+  /* Кнопка "Подробнее" */
+  .secondaryButton {
+    background-color: transparent;
+    color: #007aff;
+    padding: 0.8rem 1.5rem;
+    border: 2px solid #007aff;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block; /* Чтобы кнопка корректно занимала пространство */
+    text-align: center; /* Центрирование текста */
+    margin-top: 1rem; /* Отступ сверху */
+  }
+  
+  /* Эффект при наведении на кнопку */
+  .secondaryButton:hover {
+    background-color: #007aff;
+    color: white;
+  }
+  
