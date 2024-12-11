@@ -1,0 +1,80 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f5f5f5; /* Светло-серый фон */
+  padding: 1rem;
+}
+
+.title {
+  font-size: 2rem; /* Уменьшенный размер для компактности */
+  font-weight: 700;
+  color: #000000; /* Чёрный текст для контраста */
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: #ffffff; /* Белый фон */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.description {
+  font-size: 1rem;
+  color: #000000; /* Чёрный текст */
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.inputField {
+  width: 40%;
+  padding: 0.5rem; /* Уменьшенные отступы для компактности */
+  font-size: 1rem;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #000000; /* Чёрный текст */
+}
+
+.inputField:focus {
+  border-color: #007aff;
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 122, 255, 0.5);
+}
+
+.submitButton {
+  background-color: #007aff;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.submitButton:hover {
+  background-color: #005bb5;
+}
+
+.responseBox {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #000000; /* Чёрный текст */
+}
+
+.responseTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.responseContent {
+  font-size: 1rem;
+  line-height: 1.4;
+}

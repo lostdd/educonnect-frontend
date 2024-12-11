@@ -4,9 +4,10 @@ import styles from "./Header.module.css";
 interface HeaderProps {
   onLoginClick: () => void;
   onRegisterClick: () => void;
+  isInstructor?: boolean; // Признак роли преподавателя
 }
 
-const Header: React.FC<HeaderProps> = ({ onLoginClick, onRegisterClick }) => {
+const Header: React.FC<HeaderProps> = ({ onLoginClick, onRegisterClick, isInstructor }) => {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
@@ -14,9 +15,12 @@ const Header: React.FC<HeaderProps> = ({ onLoginClick, onRegisterClick }) => {
       </div>
       <nav className={styles.nav}>
         <a href="/courses">Курсы</a>
-        <a href="/portfolio">Портфолио</a>
-        <a href="/jobs">Работа</a>
+        {!isInstructor && <a href="/portfolio">Портфолио</a>}
+        {!isInstructor && <a href="/jobs">Работа</a>}
         <a href="/contact">Контакты</a>
+        {isInstructor && (
+          <a href="/create-course">Создать курс</a> // Ссылка только для преподавателей
+        )}
       </nav>
       <div className={styles.authButtons}>
         <button className={styles.loginButton} onClick={onLoginClick}>
